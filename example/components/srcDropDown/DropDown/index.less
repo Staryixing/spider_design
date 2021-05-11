@@ -1,0 +1,36 @@
+.dorpdown-root{
+  outline:none;
+  .dorpdown-menu{
+    width: 100%;
+    background: #3749c0; 
+    color: #fff;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    position: relative;
+    z-index: 10;
+    animation: hideIndex 0.48s;
+    .dorpdown-menu-item{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px; 
+      width: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      outline:none;
+    }
+  }
+  .dorpdown-menu-item:hover{
+    background: #1890ff;
+  }
+  @keyframes hideIndex{
+    0% { opacity: 0; }
+    100% { opacity: 1;}
+  }
+}

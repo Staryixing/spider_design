@@ -1,0 +1,40 @@
+.wb-card-root{
+  min-width: 200px;
+  min-height: 120px;
+  width: 100%;
+  border: 1px solid rgba(232,232,233,1);
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+  padding-left: 28px;
+  font-family:PingFangSC-Medium,PingFang SC;
+  font-weight:500;
+  color:rgba(0,0,0,0.85);
+}
+
+.wb-card-root-header{
+  display: flex;
+  align-items: center;
+}
+.wb-card-root-header-title{ 
+  margin-right: 6px;
+  color: #595959;
+  font-size: 28px;
+}
+
+.wb-card-root-footer{
+  display: flex;
+  flex:1;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.wb-card-root-oper{
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.wb-card-unit-pd {
+  padding: 0 6px;
+}
+

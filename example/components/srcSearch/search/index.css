@@ -1,0 +1,45 @@
+.wb-search-root{
+  overflow: hidden;
+  transition-property: all;
+  transition-duration: 0.38s;
+  transition-timing-function: ease-in-out;
+  background-color: #F0F2F5;
+  font-size:14px;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:400;
+}
+.wb-search-title{
+    text-align: right;
+    color: #1890ff;
+    cursor: pointer;
+    margin-bottom:4px;
+}
+.wb-search-spreadOut{
+    display: block;
+}
+.wb-search-spreadOut::after{
+  position: relative;
+  left: 4px;
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-left: 1px solid #1890ff;
+  border-top: 1px solid #1890ff;
+  transform: rotate( 45deg )
+}
+.wb-search-spreadIn{
+  display: block;
+}
+.wb-search-spreadIn::after{
+  position: relative;
+  top:-4px;
+  left: 4px;
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-left: 1px solid #1890ff;
+  border-top: 1px solid #1890ff;
+  transform: rotate( 225deg )
+}

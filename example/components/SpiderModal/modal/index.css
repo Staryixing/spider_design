@@ -1,0 +1,124 @@
+.wb-modal-mask{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: fade-in .48s ease;
+  animation-fill-mode:forwards;
+}
+@keyframes fade-in{
+  0% {
+    background-color: rgba(0,0,0,0);
+  }
+  40% {
+    background-color: rgba(0,0,0,0);
+  }
+  100% {
+    background-color: rgba(0,0,0,0.45);
+  }
+}
+.wb-modal-mask-fade{
+  animation: fade-out 0.48s ease;
+  animation-fill-mode:forwards;
+}
+@keyframes fade-out{
+  0% {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.45);
+  }
+  40% {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0);
+  }
+  100% {
+    background-color: rgba(0,0,0,0);
+  }
+}
+
+.wb-modal-cont{
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-clip: padding-box;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px -4px rgba(0,0,0,.12), 0 6px 16px 0 rgba(0,0,0,.08), 0 9px 28px 8px rgba(0,0,0,.05);
+  pointer-events: auto;
+  min-width: 520px;
+  min-height: 200px;
+  font-size: 14px;
+  color: rgba(0,0,0,.65);
+  overflow: hidden;
+  animation-name: mymove;
+  animation-duration: 0.48s;
+  animation-timing-function: ease; 
+  animation-fill-mode: forwards;
+}
+@keyframes mymove{
+  0% {
+    opacity: 0;
+    background: #ffffff;
+  }
+  40% {
+    opacity: 0;
+    background: #ffffff;
+  }
+  100% {
+    opacity: 1;
+    background: #ffffff;
+  }
+}
+
+.wb-modal-close{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: inline-block;
+  z-index: 10;
+  cursor: pointer;
+}
+.wb-modal-title{
+    text-align: center;
+    padding: 16px 24px;
+    color: rgba(0,0,0,.85);
+    font-weight: 500;
+    font-size: 16px;
+    font-size: 16px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 2px 2px 0 0;
+}
+.wb-modal-body{
+    padding: 16px 24px;
+}
+.wb-modal-footer{
+    padding: 10px 16px;
+    text-align: right;
+    background: 0 0;
+    border-top: 1px solid #f0f0f0;
+    border-radius: 0 0 2px 2px;
+}
+.wb-modal-footer-comfirm{
+  display: inline-block;
+  padding: 4px 15px;
+  border: 1px solid #1890ff;
+  cursor: pointer;
+  background-color: #1890ff;
+  color: #f0f0f0;
+}
+.wb-modal-footer-cancel{
+  display: inline-block;
+  padding: 4px 15px;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+}
