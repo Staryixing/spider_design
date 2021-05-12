@@ -2,14 +2,19 @@ const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
  template: path.join(__dirname, "example/index.html"),
- filename: "./index.html"
+//  filename: "./index.html"
 });
 module.exports = {
   entry: path.join(__dirname, "example/index.js"),
   module: {
     rules: [{
       test: /\.(js|jsx)$/,
-      use: "babel-loader",
+      use: {
+        loader:"babel-loader",
+        options:{
+          presets:['@babel/preset-env'] //转码规则
+        }
+      },
       exclude: /node_modules/
     },{
       test: /\.css$/,
@@ -17,7 +22,15 @@ module.exports = {
       use: ["style-loader", "css-loader"]
     },{
       test: /\.(ts|tsx)$/,
-      use: ["babel-loader","awesome-typescript-loader"],
+      use: [ 
+        {
+          loader:"babel-loader",
+          options:{
+            presets:['@babel/preset-env']
+          }
+        },
+        "awesome-typescript-loader"
+      ],
       exclude: [/node_modules/],
     },{
       test: /\.less$/,
@@ -37,7 +50,9 @@ module.exports = {
       ]
     }]
   },
-  plugins: [htmlWebpackPlugin],
+  plugins:[
+    htmlWebpackPlugin
+  ],
   resolve: {
     extensions: [".js", ".jsx",".tsx",".ts"]
   },

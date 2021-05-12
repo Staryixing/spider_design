@@ -1,5 +1,5 @@
 import React from 'react';
-import YTable from '../../../srcTable/index';
+import Table from '../srcTable/index';
 
 class TabelCom extends React.Component{
     
@@ -51,7 +51,7 @@ class TabelCom extends React.Component{
             <div>
                 <span>表格</span>
                 <div>
-                <YTable rowSelection={rowSelection} columns={columns} dataSource = {dataList} />
+                <Table rowSelection={rowSelection} columns={columns} dataSource = {dataList} />
                 </div>
             </div>
         )

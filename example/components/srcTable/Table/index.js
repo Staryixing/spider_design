@@ -47,7 +47,9 @@ class Table extends React.Component{
     }
 
     // 单个选择
-    selectChange(e, index){
+    selectChange = (e, index)=>{
+      let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+      console.log('z',z);
         let value = e.target.checked;
         this.props.rowSelection.onChange && this.props.rowSelection.onChange(value, index);
         let { selectList } = this.state;
@@ -62,8 +64,8 @@ class Table extends React.Component{
         })
     }
     // total选择
-    allSelectChange(e){
-        let value = e.target.checked;
+    allSelectChange = (e)=>{
+       let value = e.target.checked;
         let { selectList} = this.state;
         selectList.forEach(el => {
             el.selected = value
